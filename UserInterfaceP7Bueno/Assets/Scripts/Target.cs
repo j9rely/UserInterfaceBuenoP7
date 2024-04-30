@@ -37,7 +37,7 @@ public class Target : MonoBehaviour
         return pointValue;
     }
 
-    private void OnMouseDown(int pointValue)
+    private void OnMouseDown()
     {
         if (gameManager.isGameActive)
         {
@@ -45,7 +45,7 @@ public class Target : MonoBehaviour
         }
         Destroy(gameObject);
         Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-        gameManager.UpdateScore(5, pointValue);
+        gameManager.UpdateScore( pointValue);
 
     }
     private void OnTriggerEnter(Collider other)
