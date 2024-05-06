@@ -14,12 +14,12 @@ public class DifficultyScript : MonoBehaviour
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(SetDifficulty);
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     void SetDifficulty()
     {
         Debug.Log(gameObject.name + "was clicked");
-        gameManager.startGame(difficulty);
+        gameManager.StartGame(difficulty);
     }
     // Update is called once per frame
     void Update()

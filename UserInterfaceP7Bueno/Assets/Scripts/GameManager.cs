@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     {
       
     }
-    public void startGame(int difficulty)
+    public void StartGame(int difficulty)
     {
         spawnRate /= difficulty;
         isGameActive = true;

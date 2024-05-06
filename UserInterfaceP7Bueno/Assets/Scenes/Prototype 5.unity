@@ -380,13 +380,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628183589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 628183590}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: startGame
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1014,13 +1014,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628183589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 628183590}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: startGame
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1111,11 +1111,11 @@ MonoBehaviour:
   - {fileID: 5861757225519235041, guid: 532617a5a3f4b2f4a94d385ca5114b49, type: 3}
   - {fileID: 5117485850742063135, guid: cdfe3ddb831351549b48dbb476847abc, type: 3}
   - {fileID: 3321395736101875028, guid: bf80f106673b83141b8ba087fde6bd67, type: 3}
-  scoreText: {fileID: 0}
-  gameOverText: {fileID: 0}
+  scoreText: {fileID: 547752155}
+  gameOverText: {fileID: 186533847}
   isGameActive: 0
-  restartButton: {fileID: 0}
-  titleScreen: {fileID: 0}
+  restartButton: {fileID: 1104574355}
+  titleScreen: {fileID: 121093939}
 --- !u!4 &628183591
 Transform:
   m_ObjectHideFlags: 0
@@ -1215,13 +1215,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628183589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 628183590}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: startGame
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
