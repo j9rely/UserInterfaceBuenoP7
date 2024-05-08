@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Net.Sockets;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
@@ -15,12 +16,30 @@ public class GameManager : MonoBehaviour
     public bool isGameActive;
     public Button restartButton;
     public GameObject titleScreen;
-    
+    public TextMeshProUGUI livesText;
+    private int lives;
+    public GameObject pauseScreen;
+    private bool paused;
 
     // Start is called before the first frame update
     void Start()
     {
       
+    }
+    void ChangePause()
+    {
+        if (!paused)
+        {
+            paused = true;
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            paused = false;
+            pauseScreen.SetActive(false);
+            Time.timeScale = 0;
+        }
     }
     public void StartGame(int difficulty)
     {
@@ -30,6 +49,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
+        UpdateLives(3);
     }
     public void RestartGame()
     {
@@ -54,6 +74,15 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
+    }
+    public void UpdateLives(int livesToChange)
+    {
+        lives += livesToChange;
+        livesText.text = "Lives: " + lives;
+        if (lives <= 0) ;
+        {
+            GameOver();
+        }
     }
     // Update is called once per frame
     void Update()

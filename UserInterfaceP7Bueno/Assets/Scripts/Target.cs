@@ -17,7 +17,7 @@ public class Target : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         targetRb = GetComponent<Rigidbody>();
 
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
@@ -41,17 +41,21 @@ public class Target : MonoBehaviour
     {
         if (gameManager.isGameActive)
         {
-            
-        }
-        Destroy(gameObject);
+            Destroy(gameObject);
         Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         gameManager.UpdateScore( pointValue);
+        }
+        
 
     }
     private void OnTriggerEnter(Collider other)
     {
+        
+        if (!gameObject.CompareTag("Bad") && gameManager.isGameActive)
+        {
+            gameManager.UpdateLives(-1);
+        }
         Destroy(gameObject);
-        if(!gameObject.CompareTag("Bad")) { gameManager.GameOver(); }
     }
 
     Vector3 RandomForce()
