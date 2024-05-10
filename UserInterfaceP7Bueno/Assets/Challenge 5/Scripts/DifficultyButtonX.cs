@@ -23,7 +23,7 @@ public class DifficultyButtonX : MonoBehaviour
     void SetDifficulty()
     {
         NewMethod();
-        gameManagerX.StartGame();
+        gameManagerX.StartGame(difficulty);
     }
 
     private void NewMethod()
