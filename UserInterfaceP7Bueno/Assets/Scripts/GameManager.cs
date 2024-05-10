@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     {
       
     }
-    void ChangePause()
+   /* void ChangePause()
     {
         if (!paused)
         {
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             pauseScreen.SetActive(false);
             Time.timeScale = 0;
         }
-    }
+    }*/
     public void StartGame(int difficulty)
     {
         spawnRate /= difficulty;
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         lives += livesToChange;
         livesText.text = "Lives: " + lives;
-        if (lives <= 0) ;
+        if (lives <= 0) 
         {
             GameOver();
         }

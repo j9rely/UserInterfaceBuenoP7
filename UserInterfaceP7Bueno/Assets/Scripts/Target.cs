@@ -21,7 +21,7 @@ public class Target : MonoBehaviour
         targetRb = GetComponent<Rigidbody>();
 
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
-        targetRb.AddForce(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
+        targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
 
         transform.position = RandomSpawnPos();
     }
@@ -42,15 +42,15 @@ public class Target : MonoBehaviour
         if (gameManager.isGameActive)
         {
             Destroy(gameObject);
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-        gameManager.UpdateScore( pointValue);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            gameManager.UpdateScore(pointValue);
         }
-        
+
 
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+
         if (!gameObject.CompareTag("Bad") && gameManager.isGameActive)
         {
             gameManager.UpdateLives(-1);
@@ -72,4 +72,3 @@ public class Target : MonoBehaviour
     }
 }
 
-    

@@ -12,9 +12,10 @@ public class DifficultyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         button = GetComponent<Button>();
         button.onClick.AddListener(SetDifficulty);
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
     void SetDifficulty()
     {
